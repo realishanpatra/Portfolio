@@ -253,7 +253,13 @@ export const NavbarLogo = () => {
             href="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
         >
-            <img src="/N.svg" alt="NGMI Logo" width={30} height={30} className="rounded-full" />
+            <img 
+                src="/N.svg" 
+                alt="NGMI Logo" 
+                width={30} 
+                height={30} 
+                className="rounded-full transition-transform duration-300 hover:rotate-[360deg]" 
+            />
             <span className="font-medium text-black dark:text-white">NGMI</span>
         </a>
     );

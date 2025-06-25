@@ -13,7 +13,7 @@ const projects = [
         name: "Placement Predictor",
         date: "Released: June 2025",
         link: "https://placements.ngmi.club",
-        image: "https://placements.ngmi.club/og-image.png",
+        image: "/pp.png",
         description:
             "An AI-based tool that analyzes coding profiles to predict placement success, eligibility, and salary range.",
     },
@@ -74,7 +74,7 @@ export default function HomePage() {
                 {loading && (
                     <motion.div
                         key="loader"
-                        className="fixed inset-0 flex items-center justify-center bg-black z-50"
+                        className="fixed inset-0 flex items-center justify-center bg-black z-50 "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -112,7 +112,7 @@ export default function HomePage() {
                             />
                         </div>
                         {/* Hero */}
-                        <section className="mt-65 text-center relative z-10">
+                        <section className="mt-20 sm:mt-65 text-center relative z-10">
                             <ShinyText
                                 text="NGMI"
                                 disabled={false}

@@ -74,7 +74,10 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-black text-white antialiased`}
             >
                 <SharedNavbar />
+                <div className="hidden sm:block">
+
                 <SmoothCursor />
+                </div>
                 {children}
             </body>
         </html>

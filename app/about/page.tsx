@@ -3,7 +3,7 @@
 import ShinyText from "@/components/ui/shiny-text";
 import TiltedCard from "@/components/ui/tilted-card";
 import { motion } from "framer-motion";
-import { GithubIcon, HomeIcon, InfoIcon, LightbulbIcon, MessageSquareIcon } from "lucide-react";
+import { GithubIcon, HomeIcon, InfoIcon, LightbulbIcon, Link, MessageSquareIcon } from "lucide-react";
 
 export default function AboutPage() {
     const navLinks = [
@@ -45,12 +45,12 @@ export default function AboutPage() {
                 >
                     About
                     <span className="text-4xl md:text-5xl ml-3 font-extrabold mb-4">
-                    <ShinyText
-                        text="NGMI"
-                        disabled={false}
-                        speed={3}
-                        className="text-4xl md:text-5xl font-extrabold mb-4"
-                    />
+                        <ShinyText
+                            text="NGMI"
+                            disabled={false}
+                            speed={3}
+                            className="text-4xl md:text-5xl font-extrabold mb-4"
+                        />
                     </span>
                 </motion.h1>
 
@@ -85,7 +85,8 @@ export default function AboutPage() {
                     </p>
 
                     <h2 className="text-2xl font-bold mt-20 mb-4 text-center">Founders</h2>
-                    <div className="flex flex-col sm:flex-row gap-20 items-center justify-center mt-10 mb-10">
+                    <div className="flex flex-col sm:flex-row gap-20 sm:gap-40 items-center justify-center mt-10 mb-10">
+                        <a href="/about/chirag">
                         <TiltedCard
                             imageSrc="https://i.pinimg.com/736x/e0/db/af/e0dbaf44dba1c4922044c586aa3ef814.jpg"
                             altText="Chirag"
@@ -100,7 +101,8 @@ export default function AboutPage() {
                             showTooltip={true}
                             displayOverlayContent={true}
                             overlayContent={<p className="tilted-card-demo-text">Chirag</p>}
-                        />
+                        /></a>
+                        <a href="/about/ishan">
                         <TiltedCard
                             imageSrc="https://i.pinimg.com/736x/d1/69/39/d16939ff47c6b7b30743082ef2db5d30.jpg"
                             altText="Ishan"
@@ -116,7 +118,9 @@ export default function AboutPage() {
                             displayOverlayContent={true}
                             overlayContent={<p className="tilted-card-demo-text">Ishan</p>}
                         />
+                        </a>
                     </div>
+                    
                 </motion.div>
             </div>
         </main>
