@@ -29,7 +29,7 @@ export function SharedNavbar() {
             <NavBody>
                 <NavbarLogo />
                 <NavItems items={navItems} />
-                <NavbarButton href="https://github.com" variant="primary">
+                <NavbarButton href="https://github.com/NgmiClub" variant="primary">
                     GitHub
                 </NavbarButton>
             </NavBody>

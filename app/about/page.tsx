@@ -1,6 +1,7 @@
 "use client";
 
-import { FloatingDock } from "@/components/ui/floating-dock";
+import ShinyText from "@/components/ui/shiny-text";
+import TiltedCard from "@/components/ui/tilted-card";
 import { motion } from "framer-motion";
 import { GithubIcon, HomeIcon, InfoIcon, LightbulbIcon, MessageSquareIcon } from "lucide-react";
 
@@ -29,20 +30,28 @@ export default function AboutPage() {
         {
             title: "GitHub",
             icon: <GithubIcon className="h-full w-full text-white/80" />,
-            href: "https://github.com",
+            href: "https://github.com/NgmiClub",
         },
     ];
 
     return (
         <main className="relative min-h-screen bg-black text-white px-6 py-12 overflow-hidden">
-            <div className="mt-20 max-w-4xl mx-auto">
+            <div className="sm:mt-16 max-w-4xl mx-auto">
                 <motion.h1
                     className="text-4xl md:text-5xl font-bold mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    About NGMI
+                    About
+                    <span className="text-4xl md:text-5xl ml-3 font-extrabold mb-4">
+                    <ShinyText
+                        text="NGMI"
+                        disabled={false}
+                        speed={3}
+                        className="text-4xl md:text-5xl font-extrabold mb-4"
+                    />
+                    </span>
                 </motion.h1>
 
                 <motion.div
@@ -74,16 +83,41 @@ export default function AboutPage() {
                         breaking into and advancing in the industry. Our diverse team brings together expertise in AI,
                         career development, and educational technology.
                     </p>
-                </motion.div>
-            </div>
 
-            {/* Floating Dock - Fixed at the bottom */}
-            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
-                <FloatingDock
-                    items={navLinks}
-                    desktopClassName="bg-black/40 border border-white/10 backdrop-blur-md"
-                    mobileClassName="bg-black/40 border border-white/10 backdrop-blur-md"
-                />
+                    <h2 className="text-2xl font-bold mt-20 mb-4 text-center">Founders</h2>
+                    <div className="flex flex-col sm:flex-row gap-20 items-center justify-center mt-10 mb-10">
+                        <TiltedCard
+                            imageSrc="https://i.pinimg.com/736x/e0/db/af/e0dbaf44dba1c4922044c586aa3ef814.jpg"
+                            altText="Chirag"
+                            captionText="Chirag"
+                            containerHeight="300px"
+                            containerWidth="300px"
+                            imageHeight="300px"
+                            imageWidth="300px"
+                            rotateAmplitude={12}
+                            scaleOnHover={1.2}
+                            showMobileWarning={false}
+                            showTooltip={true}
+                            displayOverlayContent={true}
+                            overlayContent={<p className="tilted-card-demo-text">Chirag</p>}
+                        />
+                        <TiltedCard
+                            imageSrc="https://i.pinimg.com/736x/d1/69/39/d16939ff47c6b7b30743082ef2db5d30.jpg"
+                            altText="Ishan"
+                            captionText="Ishan"
+                            containerHeight="300px"
+                            containerWidth="300px"
+                            imageHeight="300px"
+                            imageWidth="300px"
+                            rotateAmplitude={12}
+                            scaleOnHover={1.2}
+                            showMobileWarning={false}
+                            showTooltip={true}
+                            displayOverlayContent={true}
+                            overlayContent={<p className="tilted-card-demo-text">Ishan</p>}
+                        />
+                    </div>
+                </motion.div>
             </div>
         </main>
     );

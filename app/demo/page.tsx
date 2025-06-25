@@ -1,7 +1,5 @@
 "use client";
 
-import FloatingDockDemo from "@/components/floating-dock-demo";
-
 export default function DemoPage() {
     return (
         <div className="min-h-screen bg-background text-foreground">
@@ -11,7 +9,7 @@ export default function DemoPage() {
                     Hover over the dock at the bottom of this container to see the interactive effect
                 </p>
                 <div className="border border-border rounded-lg overflow-hidden bg-card">
-                    <FloatingDockDemo />
+                    {/* FloatingDockDemo /> */}
                 </div>
             </div>
         </div>
