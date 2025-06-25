@@ -43,6 +43,55 @@ interface MobileNavMenuProps {
     onClose: () => void;
 }
 
+// Utility type for polymorphic component props
+// (from https://github.com/kripod/react-polymorphic-box or similar pattern)
+type AsProp<T extends React.ElementType> = {
+    as?: T;
+};
+
+type PropsToOmit<T extends React.ElementType, P> = keyof (AsProp<T> & P);
+
+type PolymorphicComponentProps<T extends React.ElementType, Props = {}> = React.PropsWithChildren<Props & AsProp<T>> &
+    Omit<React.ComponentPropsWithoutRef<T>, PropsToOmit<T, Props>>;
+
+// NavbarButton props
+interface NavbarButtonOwnProps {
+    className?: string;
+    variant?: "primary" | "secondary" | "dark" | "gradient";
+    href?: string;
+}
+
+type NavbarButtonProps<T extends React.ElementType> = PolymorphicComponentProps<T, NavbarButtonOwnProps>;
+
+const NavbarButtonInner = <T extends React.ElementType = "a">(
+    { as, className, variant = "primary", href, children, ...props }: NavbarButtonProps<T>,
+    ref: React.Ref<any>
+) => {
+    const Tag = as || "a";
+    const baseStyles =
+        "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+
+    const variantStyles = {
+        primary:
+            "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+        secondary: "bg-transparent shadow-none dark:text-white",
+        dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+        gradient:
+            "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+    };
+
+    // Only pass href if Tag is 'a' or a component that accepts it
+    const tagProps: any = { ...props, className: cn(baseStyles, variantStyles[variant], className), ref };
+    if (Tag === "a" && href) tagProps.href = href;
+
+    return <Tag {...tagProps}>{children}</Tag>;
+};
+
+export const NavbarButton = React.forwardRef(NavbarButtonInner) as <T extends React.ElementType = "a">(
+    props: NavbarButtonProps<T> & { ref?: React.Ref<any> }
+) => React.ReactElement | null;
+NavbarButton.displayName = "NavbarButton";
+
 export const Navbar = ({ children, className }: NavbarProps) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollY } = useScroll({
@@ -207,38 +256,5 @@ export const NavbarLogo = () => {
             <img src="/N.svg" alt="NGMI Logo" width={30} height={30} className="rounded-full" />
             <span className="font-medium text-black dark:text-white">NGMI</span>
         </a>
-    );
-};
-
-export const NavbarButton = ({
-    href,
-    as: Tag = "a",
-    children,
-    className,
-    variant = "primary",
-    ...props
-}: {
-    href?: string;
-    as?: React.ElementType;
-    children: React.ReactNode;
-    className?: string;
-    variant?: "primary" | "secondary" | "dark" | "gradient";
-} & (React.ComponentPropsWithoutRef<"a"> | React.ComponentPropsWithoutRef<"button">)) => {
-    const baseStyles =
-        "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
-
-    const variantStyles = {
-        primary:
-            "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-        secondary: "bg-transparent shadow-none dark:text-white",
-        dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-        gradient:
-            "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
-    };
-
-    return (
-        <Tag href={href || undefined} className={cn(baseStyles, variantStyles[variant], className)} {...props}>
-            {children}
-        </Tag>
     );
 };
