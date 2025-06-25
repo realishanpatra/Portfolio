@@ -70,18 +70,6 @@ export default function HomePage() {
 
     return (
         <main className="relative min-h-screen bg-black text-white px-6 py-12 overflow-hidden">
-            <div style={{ width: "100%", height: "80%", position: "fixed", top: 0, left: 0, zIndex: 0 }}>
-                <Beams
-                    beamWidth={3}
-                    beamHeight={30}
-                    beamNumber={20}
-                    lightColor="#ffffff"
-                    speed={2}
-                    noiseIntensity={1.75}
-                    scale={0.2}
-                    rotation={30}
-                />
-            </div>
             <AnimatePresence>
                 {loading && (
                     <motion.div
@@ -110,6 +98,19 @@ export default function HomePage() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8 }}
                     >
+                        {/* Beams BG only after loading is done */}
+                        <div style={{ width: "100%", height: "80%", position: "fixed", top: 0, left: 0, zIndex: 0 }}>
+                            <Beams
+                                beamWidth={3}
+                                beamHeight={30}
+                                beamNumber={20}
+                                lightColor="#ffffff"
+                                speed={2}
+                                noiseIntensity={1.75}
+                                scale={0.2}
+                                rotation={30}
+                            />
+                        </div>
                         {/* Hero */}
                         <section className="mt-65 text-center relative z-10">
                             <ShinyText
