@@ -9,7 +9,11 @@ const chirag = {
     bio: `Chirag is the co-founder of NGMI. Passionate about AI, education, and building tools for the next generation of tech talent. He believes in empowering others through technology and community.`,
     socials: [
         { icon: <GithubIcon className="w-5 h-5" />, url: "https://github.com/definitelynotchirag", label: "GitHub" },
-        { icon: <LinkedinIcon className="w-5 h-5" />, url: "https://linkedin.com/in/chirag-dave-751a91249", label: "LinkedIn" },
+        {
+            icon: <LinkedinIcon className="w-5 h-5" />,
+            url: "https://linkedin.com/in/chirag-dave-751a91249",
+            label: "LinkedIn",
+        },
         { icon: <GlobeIcon className="w-5 h-5" />, url: "https://chirxg.is-a.dev", label: "Website" },
     ],
 };

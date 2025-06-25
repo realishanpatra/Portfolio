@@ -5,7 +5,7 @@
 import Beams from "@/components/ui/beam-bg";
 import ShinyText from "@/components/ui/shiny-text";
 import { AnimatePresence, motion } from "framer-motion";
-import { GithubIcon, HomeIcon, InfoIcon, LightbulbIcon, MessageSquareIcon } from "lucide-react";
+import { GithubIcon, HomeIcon, InfoIcon, LightbulbIcon, MessageSquareIcon, TwitterIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const projects = [
@@ -182,21 +182,45 @@ export default function HomePage() {
                                 <p className="text-center text-white/70 mb-6">
                                     Have questions or want to collaborate? Reach out to us.
                                 </p>
-                                <div className="text-center">
+                                <div className="flex flex-col gap-4 items-center">
+                                <div className="flex gap-4 justify-center">
+                                        <a
+                                            href="https://x.com/ngmiclub"
+                                            target="_blank"
+                                            rel="noopener noreferrer" 
+                                            className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
+                                        >
+                                            <TwitterIcon className="w-5 h-5 text-white/80" />
+                                        </a>
+                                        <a
+                                            href="https://linkedin.com/company/ngmiclub"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
+                                        >
+                                            <LinkedinIcon className="w-5 h-5 text-white/80" />
+                                        </a>
+                                        <a
+                                            href="https://youtube.com/@ngmiclub"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
+                                        >
+                                            <YoutubeIcon className="w-5 h-5 text-white/80" />
+                                        </a>
+                                    </div>
                                     <a
                                         href="mailto:contact@ngmi.club"
-                                        className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
+                                        className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300 w-full text-center"
                                     >
                                         ngmi.tech@gmail.com
                                     </a>
+                                    
                                 </div>
                             </div>
                         </section>
 
-                        {/* Footer */}
-                        <footer className="mt-32 border-t border-white/10 text-sm text-center py-6 text-white/50 relative z-10">
-                            &copy; 2025 NGMI. Built by the NGMI team.
-                        </footer>
+                        
                     </motion.div>
                 )}
             </AnimatePresence>

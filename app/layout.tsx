@@ -79,6 +79,10 @@ export default function RootLayout({
                 <SmoothCursor />
                 </div>
                 {children}
+                {/* Footer */}
+                <footer className="mt-32 border-t border-white/10 text-sm text-center py-6 text-white/50 relative z-10">
+                            &copy; 2025 NGMI. Built by the NGMI team.
+                </footer>
             </body>
         </html>
     );

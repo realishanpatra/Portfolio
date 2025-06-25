@@ -3,14 +3,17 @@
 import ShinyText from "@/components/ui/shiny-text";
 import { GithubIcon, GlobeIcon, LinkedinIcon } from "lucide-react";
 
-
 const ishan = {
     name: "Ishan Patra",
     image: "https://i.pinimg.com/736x/d1/69/39/d16939ff47c6b7b30743082ef2db5d30.jpg",
     bio: `Ishan is the co-founder of NGMI. Loves solving problems at scale and empowering others through technology. He is dedicated to building impactful products and fostering innovation in tech communities.`,
     socials: [
         { icon: <GithubIcon className="w-5 h-5" />, url: "https://github.com/realishanpatra", label: "GitHub" },
-        { icon: <LinkedinIcon className="w-5 h-5" />, url: "https://linkedin.com/in/ishan-patra-407a74257", label: "LinkedIn" },
+        {
+            icon: <LinkedinIcon className="w-5 h-5" />,
+            url: "https://linkedin.com/in/ishan-patra-407a74257",
+            label: "LinkedIn",
+        },
         { icon: <GlobeIcon className="w-5 h-5" />, url: "https://ishanpatra.com", label: "Website" },
     ],
 };
