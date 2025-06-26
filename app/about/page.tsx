@@ -16,12 +16,12 @@ export default function AboutPage() {
             href: "/",
         },
         {
-            title: "About",
+            title: "About Me",
             icon: <InfoIcon className="h-full w-full text-white/80" />,
             href: "/about",
         },
         {
-            title: "Projects",
+            title: "My Projects",
             icon: <LightbulbIcon className="h-full w-full text-white/80" />,
             href: "/#projects",
         },
