@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "NGMI - Not Gonna Make It",
-    description: "Not Gonna Make It — until you actually do.",
+    title: "Ishan's Portfolio",
+    description: "Welcome to Ishan's Portfolio - A showcase of my work and projects.",
     icons: {
         icon: "/N.svg",
     },
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
                 url: "/og-image.png",
             },
         ],
-        title: "NGMI - Not Gonna Make It",
-        description: "Not Gonna Make It — until you actually do.",
-        url: "https://ngmi.club",
-        siteName: "NGMI",
+        title: "Ishan's Portfolio",
+        description: "Welcome to Ishan's Portfolio - A showcase of my work and projects.",
+        url: "https://Ishan.ngmi.club",
+        siteName: "Ishan's Portfolio",
         locale: "en_US",
         type: "website",
     },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         images: ["/og-image.png"],
     },
     alternates: {
-        canonical: "https://ngmi.club",
+        canonical: "https://Ishan.ngmi.club",
     },
     robots: {
         index: true,
@@ -81,7 +81,7 @@ export default function RootLayout({
                 {children}
                 {/* Footer */}
                 <footer className="mt-32 border-t border-white/10 text-sm text-center py-6 text-white/50 relative z-10">
-                            &copy; 2025 NGMI. Built by the NGMI team.
+                            &copy; 2025 Portfolio. Built by Ishan Patra.
                 </footer>
             </body>
         </html>

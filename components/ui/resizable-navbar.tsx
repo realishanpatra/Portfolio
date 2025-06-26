@@ -87,10 +87,9 @@ const NavbarButtonInner = <T extends React.ElementType = "a">(
     return <Tag {...tagProps}>{children}</Tag>;
 };
 
-export const NavbarButton = React.forwardRef(NavbarButtonInner) as <T extends React.ElementType = "a">(
-    props: NavbarButtonProps<T> & { ref?: React.Ref<any> }
-) => React.ReactElement | null;
-NavbarButton.displayName = "NavbarButton";
+const NavbarButtonComponent = React.forwardRef(NavbarButtonInner) as unknown as React.ForwardRefExoticComponent<any>;
+(NavbarButtonComponent as React.ForwardRefExoticComponent<any>).displayName = "NavbarButton";
+export const NavbarButton = NavbarButtonComponent;
 
 export const Navbar = ({ children, className }: NavbarProps) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -260,7 +259,7 @@ export const NavbarLogo = () => {
                 height={30} 
                 className="rounded-full transition-transform duration-300 hover:rotate-[360deg]" 
             />
-            <span className="font-medium text-black dark:text-white">NGMI</span>
+            <span className="font-medium text-black dark:text-white">Ishan Patra</span>
         </a>
     );
 };
