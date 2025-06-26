@@ -18,8 +18,8 @@ export function SharedNavbar() {
 
     const navItems = [
         { name: "Home", link: "/" },
-        { name: "About", link: "/about" },
-        { name: "Projects", link: "/#projects" },
+        { name: "About Me", link: "/about" },
+        { name: "My Projects", link: "/#projects" },
         { name: "Contact", link: "/#contact" },
     ];
 
