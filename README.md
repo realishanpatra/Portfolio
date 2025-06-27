@@ -1,50 +1,72 @@
-# NGMI (Not Gonna Make It)
+# Ishan Patra – Portfolio Projects
 
-NGMI is a platform dedicated to helping students and professionals navigate the challenging landscape of tech careers. Our mission is to transform the "Not Gonna Make It" mindset into "Actually Made It" through AI-powered tools, resources, and community support.
+Welcome to my portfolio repository!  
+I'm **Ishan Patra**, a final-year B.E. student at **PICT Pune**, pursuing Electronics & Telecommunication Engineering. I’m passionate about **development**, **innovation**, and **entrepreneurship**, and I love building solutions that make a real-world impact.
+
+This repository showcases some of my projects and experiments — from AI tools to interactive web platforms — all built with modern tech stacks and a vision to solve meaningful problems.
+
+---
 
 ## Table of Contents
 
--   [About](#about)
--   [Features](#features)
+-   [About Me](#about-me)
+-   [Featured Project](#featured-project)
+-   [Upcoming Tools](#upcoming-tools)
+-   [Tech Stack](#tech-stack)
 -   [Project Structure](#project-structure)
 -   [Getting Started](#getting-started)
 -   [Scripts](#scripts)
 -   [Dependencies](#dependencies)
--   [Contributing](#contributing)
 -   [Contact](#contact)
 -   [License](#license)
 
 ---
 
-## About
+## About Me
 
-NGMI (Not Gonna Make It) is a platform designed to empower users in their tech career journeys. We believe that with the right tools and guidance, everyone can overcome career obstacles and achieve their professional goals. Our AI-powered platform provides personalized insights and recommendations to help you make informed decisions about your career path.
+Hi! I'm Ishan 👋  
+I build tools and platforms that bridge the gap between ambition and opportunity. My interests lie in AI, full-stack development, and user-centric design. With a passion for shipping polished and scalable products, I’m constantly learning and pushing limits.
 
 **Vision:**  
-Transforming "Not Gonna Make It" into "Actually Made It" for everyone in tech.
+To empower people and solve problems through technology, creativity, and innovation.
 
-**Team:**  
-Founded by tech professionals with experience in AI, career development, and educational technology.
+**Recent Focus Areas:**
+- AI in Career Tech
+- Scalable web applications
+- Clean and responsive UIs
 
 ---
 
-## Features
+## Featured Project
 
--   **Placement Predictor:**  
-    An AI-based tool that analyzes coding profiles to predict placement success, eligibility, and salary range.  
-    [Try it here](https://placements.ngmi.club)
+### 🚀 [Placement Predictor](https://placements.ngmi.club)
 
--   **Upcoming Tools:**
+An AI-based platform that analyzes coding profiles to predict:
+- Placement eligibility
+- Target companies
+- Salary range
 
-    -   AI Resume Analyzer
-    -   Internship Radar
-    -   Company Culture Detector
+> Built using: Next.js, React, TailwindCSS, Python, Framer Motion
 
--   **Modern UI:**
-    -   Floating Dock navigation
-    -   Animated backgrounds and effects
-    -   Responsive design
+---
 
+## Upcoming Tools
+
+Exciting projects in the pipeline:
+
+- 🔍 **AI Resume Analyzer** – Get detailed feedback on your resume using machine learning
+- 📡 **Internship Radar** – Smart tool to match you with internship opportunities
+- 🧠 **Company Culture Detector** – Understand job fit through JD analysis
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, Next.js 15+, TailwindCSS, Framer Motion
+- **Backend:** Node.js, Express, Python (Flask), MongoDB, MySQL
+- **ML/AI:** Sklearn, Pandas, Numpy, Regression Models, Random Forest
+- **DevOps:** Docker, Vercel, AWS
+- **UI/UX:** Figma, Lucide Icons, ShinyText, Animated Backgrounds
 ---
 
 ## Project Structure
@@ -127,19 +149,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 -   [TypeScript](https://www.typescriptlang.org/)
 
 See `package.json` for the full list.
-
----
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
----
-
-## Contact
-
-Have questions or want to collaborate?  
-Email: [contact@ngmi.club](mailto:contact@ngmi.club)
 
 ---
 
