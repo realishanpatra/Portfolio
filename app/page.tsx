@@ -52,7 +52,7 @@ export default function HomePage() {
                             text="Hey there!"
                             disabled={false}
                             speed={1}
-                            className="text-6xl sm:text-9xl md:text-9xl scale-150 font-extrabold mb-4"
+                            className="text-6xl sm:text-9xl md:text-9xl scale-110 font-extrabold mb-4"
                         />
                     </motion.div>
                 )}
@@ -67,7 +67,7 @@ export default function HomePage() {
                             text="Ishan Patra"
                             disabled={false}
                             speed={3}
-                            className="text-6xl sm:text-9xl md:text-9xl scale-150 font-extrabold mb-4"
+                            className="text-6xl sm:text-9xl md:text-9xl scale-110 font-extrabold mb-4"
                         />
 
                         <motion.p
