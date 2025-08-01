@@ -104,7 +104,7 @@ export default function HomePage() {
                                     <p className="text-sm text-white/80">{project.description}</p>
                                 </motion.a>
                             ))}
-                        </div>
+                        </div>  
                     </section>
 
                     {/* Upcoming Projects */}
@@ -134,7 +134,7 @@ export default function HomePage() {
                             <div className="flex flex-col gap-4 items-center">
                                 <div className="flex gap-4 justify-center">
                                     <a
-                                        href="https://x.com/realishanpatra"
+                                        href="https://x.com/ezpixels"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
@@ -150,7 +150,7 @@ export default function HomePage() {
                                         <LinkedinIcon className="w-5 h-5 text-white/80" />
                                     </a>
                                     <a
-                                        href="https://youtube.com/@realishanpatra"
+                                        href="https://youtube.com/@ngmi_ishan"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all hover:scale-105 duration-300"
